@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main id="contact">
+    <main id="main" class="contact-main">
         <header>
             <div class="logo">
                 <a href="index.html">&lt;Ahuoyiza /&gt;</a>
@@ -18,11 +18,22 @@
             <nav>
                 <div class="nav-desktop"><a href="https://www.github.com/Ahuoyiza">Works</a></div>
                 <div class="contact nav-desktop" ><a href="contact.html">Contact</a></div>
-                <div ><i onclick="menuToggle()" class="fas fa-bars"></i></div>
+                <div ><i onclick="menuOpen()" class="fas fa-bars"></i></div>
             </nav>
         </header>
         <section>
-            
+        <section class="contact-page">
+            <div  class="animate-contact">
+                <h2>Get in touch!</h2>
+                <a href="mailto:sophieoyiza@gmail.com">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>sophieoyiza@gmail.com</a>
+                    <p></p>
+
+                    <a href="tel:+2348104077753">
+                    <i class="fa fa-phone" aria-hidden="true"></i>+2348104077753</a>
+                    
+            </div>
+           
         </section>
         <section class="socialmedia">
             <a href="https://www.twitter.com/Ahuoyiza_" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -43,7 +54,7 @@
             <nav>
                 <div class="nav-desktop"><a>Works</a></div>
                 <div class="contact nav-desktop"><a>Contact</a></div>
-                <div onclick="menuToggle()"><i class="fas fa-times"></i></div>
+                <div onclick="menuClose()"><i class="fas fa-times"></i></div>
             </nav>
         </header>
         <section>
