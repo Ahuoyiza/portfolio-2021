@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+:root {
+    --debug: 1px solid red;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',Tahoma, sans-serif;
+    font-size: 16px;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}
+a:visited, a:active{
+    color: #fff;
+}
+main,
+header,
+.logo, 
+.menu-desktop,
+nav{
+    display: flex;
+}
+body {
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+}
+main {
+    /* display: none; */
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 2% ;    
+    background-image: url('./assets/{\ CODE\ }.png');
+    background-color: #151515;
+    color: #fff;
+
+}
+#contact {
+    background-image: url('./assets/contact.png');
+
+}
+header{
+    max-width: 100vw;
+    justify-content: space-between;
+  
+}
+.logo a {
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: 500;
+    
+}
+.logo span {
+    font-size: 17px;
+    opacity: 0.5;
+    margin-left: 5px;
+    align-self: center;
+
+}
+/* navigation */
+
+nav a{
+    opacity: 0.7;
+    font-size: 1.4em;
+    position: relative;
+    padding-bottom: 10px;
+}
+nav a::after,
+nav a::before,
+nav a{
+    transition: all .5s;
+    
+}
+nav a::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 1px;
+}
+nav a:hover:after {
+    width: 100%;
+  }
+  nav a:hover{
+      opacity: 1;
+  }
+nav div {
+    padding: 0 10px;
+}
+nav i{
+    font-size: 1.8em;
+    /* margin-right: 20px; */
+    cursor: pointer;
+    
+    transition: ease-in-out 0.2s;
+
+}
+nav i:hover{
+    color: #c0c0c0;
+    transform: scale(1.2);
+
+}
+.contact {
+    padding: 0 50px ;
+}
+/* desktop-menu */
+#menu-desktop{
+    /* display:none; */
+    padding-top:0 2% 2% 2%;
+    min-height: 100vh;
+    flex-direction: column;
+    
+    background-image: url('./assets/menu.png');
+    background-color: #151515;
+    color: #fff;
+
+}
+#menu-desktop header{
+    position: absolute;
+    width: 95vw;
+    margin: auto;
+    padding-top: 2%;
+}
+#menu-desktop header .logo {
+    margin-left: 2%;
+}
+.menu-items{
+    display: flex;
+    
+    
+
+}
+.menu-item{
+    display: flex;
+    height: 100vh;
+    flex: 1;
+    padding: 20px 0;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #191919;  
+
+    font-weight: 700;
+    font-size: 2.5em;
+   
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #f1f1f1;
+    -webkit-text-fill-color: #111;
+    -webkit-transition: all -3.4s -2.6s linear;
+    -moz-transition: all -3.4s -2.6s linear;
+    -o-transition: all -3.4s -2.6s linear;
+    transition: all -3.4s -2.6s linear;
+    letter-spacing: 18px;
+}
+.menu-item div {
+    font-size: 1.2em;
+    /* margin: 50%; */
+}
+.menu-item:hover{
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-fill-color: #fff;
+    background-color: #111;
+    color: #fff;
+    box-shadow: -5px 4px 201px 2px rgba(0,0,0,0.8);
+    -webkit-box-shadow: -5px 4px 201px 2px rgba(0,0,0,0.8);
+    -moz-box-shadow: -5px 4px 201px 2px rgba(0,0,0,0.8);
+}
+
+
+/* social handles */
+.socialmedia{
+   
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 20px ;
+    margin-bottom: 40px;
+    opacity: 0.6;
+}
+.socialmedia a{
+
+    margin-right: 20px;
+}
+
+.socialmedia a i:hover::before{
+    transform: scale(1.1);
+    /* box-shadow: 0 0 15px #ffee10; */
+}
+.socialmedia a i:hover{
+    transform: scale(1.3);
+    color: #ffee10;
+    /* box-shadow: 0 0 5px #ffee10; */
+    text-shadow: 0 0 5px #ffee10;
+    transition: ease-in-out 0.3s;
+
+}
+.socialmedia a i{
+    font-size: 2.3em;
+    
+}
+
+/* mobile */
+@media only screen and (max-width: 600px) {
+   main {
+    flex-direction: column;
+    padding: 5%; 
+   }
+
+   .logo {
+       flex-direction: column;
+   }
+
+   .nav-desktop{
+    display: none;
+   }
+
+   #menu-desktop{
+    flex-direction: column;
+  
+   }
+   
+   .menu-items{
+       flex-direction: column;
+       margin-top: 90px;
+
+      
+
+   }
+   .menu-items header {
+       display: flex;
+       max-width: 100vw;
+        justify-content: space-between;
+        min-width: 100vw;
+        position: relative;
+    
+   }
+
+ 
+  }
